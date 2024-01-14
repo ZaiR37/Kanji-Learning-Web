@@ -39,9 +39,6 @@ header #logo {
   font-weight: 600;
   font-style: italic;
 
-  background: -webkit-linear-gradient(left var(--clr-primary), var(--clr-secondary), var(--clr-primary));
-  background: -o-linear-gradient(right, var(--clr-primary), var(--clr-secondary), var(--clr-primary));
-  background: -moz-linear-gradient(right, var(--clr-primary), var(--clr-secondary), var(--clr-primary));
   background: linear-gradient(to right, var(--clr-primary), var(--clr-secondary), var(--clr-primary));
   background-clip: text;
   -webkit-background-clip: text;

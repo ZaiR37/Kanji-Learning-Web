@@ -7,7 +7,7 @@ import kanjiScribleIMG from "../../assets/img/kanji-scrible.png";
     <section id="hero-image">
         <div id="center">
             <img id="background-bluesplash-img" :src="blueSplashIMG" alt="blue-splash.webp">
-            <h1>LEARN JAPANESE WITH US NOW!</h1>
+            <h1>LEARN <span>JAPANESE</span> WITH US NOW!</h1>
             <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis minus non earum sint voluptatem,
                 vero
                 facere placeat inventore quo illo.</P>
@@ -57,6 +57,25 @@ import kanjiScribleIMG from "../../assets/img/kanji-scrible.png";
     text-align: center;
     min-width: 300px;
     max-width: 450px;
+}
+
+#hero-image #center h1 span {
+    background: linear-gradient(to bottom, var(--clr-header-title-gradient-1), var(--clr-header-title-gradient-2));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+}
+
+#hero-image #center h1 span::after {
+    position: absolute;
+    right: 20px;
+    top: 220px;
+    background-color: var(--clr-accent);
+    content: '';
+    display: block;
+    height: .2em;
+    width: 55%;
 }
 
 #hero-image #center p {
