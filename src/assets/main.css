@@ -1,0 +1,26 @@
+:root {
+    --clr-text: #090C10;
+    --clr-background: #DDE2E9;
+    --clr-primary: #3A5582;
+    --clr-secondary: #8db0e7;
+    --clr-accent: #5b98fb;
+
+    --header-border-clr: #0000002f;
+
+    --nav-underline-padding: .5em;
+    --nav-underline-clr: #8dafe780;
+    --nav-list-shadow: #bcd0f0;
+
+    --offer-underline-title-clr: #3a548262;
+    --offer-box-clr: #3a55820d;
+}
+
+body {
+    background-color: var(--clr-background);
+    font-family: 'Poppins', sans-serif;
+    margin: 0px 50px;
+}
+
+#header-container {
+    height: 100vh;
+}

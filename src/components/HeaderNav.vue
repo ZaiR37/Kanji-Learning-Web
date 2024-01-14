@@ -1,0 +1,103 @@
+<script setup>
+
+</script>
+
+<template>
+  <header>
+    <div id="logo">
+      <a href="#">KANJI LEARNING</a>
+    </div>
+    <ul id="nav-menu">
+      <li> <a href="#">Kanji List</a></li>
+      <li> <a href="#">Quiz</a></li>
+      <li> <a href="#">About</a></li>
+    </ul>
+  </header>
+</template>
+
+<style scoped>
+header {
+  border-bottom: 0.12em solid var(--header-border-clr);
+  display: flex;
+}
+
+header>* {
+  flex-grow: 1;
+}
+
+header a {
+  color: var(--clr-text);
+  text-decoration: none;
+}
+
+header #logo {
+  margin: auto;
+  padding: 0px 50px;
+
+  font-size: 30px;
+  font-weight: 600;
+  font-style: italic;
+
+  background: -webkit-linear-gradient(left var(--clr-primary), var(--clr-secondary), var(--clr-primary));
+  background: -o-linear-gradient(right, var(--clr-primary), var(--clr-secondary), var(--clr-primary));
+  background: -moz-linear-gradient(right, var(--clr-primary), var(--clr-secondary), var(--clr-primary));
+  background: linear-gradient(to right, var(--clr-primary), var(--clr-secondary), var(--clr-primary));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+header #logo span {
+  margin: 0;
+}
+
+header #nav-menu {
+  padding: 20px 50px;
+  margin: 0;
+
+  font-size: 18px;
+  list-style: none;
+
+  display: flex;
+  justify-content: flex-end;
+  gap: 2rem;
+}
+
+header #nav-menu a {
+  position: relative;
+  display: inline-block;
+  padding: 0px var(--nav-underline-padding);
+  text-decoration: none;
+}
+
+header #nav-menu a:hover {
+  text-shadow: 5px 5px 8px var(--nav-list-shadow);
+}
+
+header #nav-menu a:after {
+  position: absolute;
+  left: 0px;
+  background-color: var(--nav-underline-clr);
+  content: '';
+  display: block;
+  height: .2em;
+  margin-top: .2em;
+  transition: width .5s;
+  width: 0;
+}
+
+header #nav-menu a:hover:after {
+  width: 100%;
+}
+
+@media all and (max-width: 730px) {
+  header {
+    flex-direction: column;
+    padding-top: 20px;
+  }
+
+  header #nav-menu {
+    justify-content: center;
+  }
+}
+</style>
