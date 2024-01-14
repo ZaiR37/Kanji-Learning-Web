@@ -7,7 +7,7 @@ import kanjiScribleIMG from "../../assets/img/kanji-scrible.png";
     <section id="hero-image">
         <div id="center">
             <img id="background-bluesplash-img" :src="blueSplashIMG" alt="blue-splash.webp">
-            <h1>LEARN <span>JAPANESE</span> WITH US NOW!</h1>
+            <h1>LEARN <div id="JP-Wrapper"><span>JAPANESE</span></div> WITH US NOW!</h1>
             <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis minus non earum sint voluptatem,
                 vero
                 facere placeat inventore quo illo.</P>
@@ -59,7 +59,12 @@ import kanjiScribleIMG from "../../assets/img/kanji-scrible.png";
     max-width: 450px;
 }
 
-#hero-image #center h1 span {
+#JP-Wrapper{
+    display: inline;
+    position: relative;
+}
+
+#JP-Wrapper span {
     background: linear-gradient(to bottom, var(--clr-header-title-gradient-1), var(--clr-header-title-gradient-2));
     background-clip: text;
     -webkit-background-clip: text;
@@ -67,15 +72,15 @@ import kanjiScribleIMG from "../../assets/img/kanji-scrible.png";
 
 }
 
-#hero-image #center h1 span::after {
+#JP-Wrapper span::after {
     position: absolute;
-    right: 20px;
-    top: 220px;
+    bottom: -2px;
+    right: 0px;
     background-color: var(--clr-accent);
     content: '';
     display: block;
     height: .2em;
-    width: 55%;
+    width: 100%;
 }
 
 #hero-image #center p {
@@ -87,16 +92,17 @@ import kanjiScribleIMG from "../../assets/img/kanji-scrible.png";
 #scrible-wrapper {
     position: absolute;
     right: 0px;
-    width: 100vw;
-    height: 89.8%;
+    width: 25vw;
+    height: 77%;
+    top: 90px;
     overflow: hidden;
 }
 
 #background-scrible-img {
     position: absolute;
-    height: 100%;
+    height: 110%;
     right: -50px;
-    bottom: -50px;
+    bottom: -30px;
     z-index: -2;
 }
 </style>

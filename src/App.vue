@@ -1,18 +1,21 @@
 <script setup>
 import { RouterView } from 'vue-router'
 import HeaderNav from './components/HeaderNav.vue'
+import Footer from './components/Footer.vue'
 </script>
 
 <template>
   <HeaderNav></HeaderNav>
-  <RouterView v-slot="{ Component }">
+  <RouterView id="RouterView" v-slot="{ Component }">
     <transition name="route" mode="out-in">
       <component :is="Component"></component>
     </transition>
   </RouterView>
+  <Footer></Footer>
 </template>
 
 <style scoped>
+
 /* route transition */
 .route-enter-from {
   opacity: 0;
