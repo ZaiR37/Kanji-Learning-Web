@@ -1,16 +1,17 @@
 <script setup>
+import { RouterLink } from 'vue-router'
 
 </script>
 
 <template>
   <header>
     <div id="logo">
-      <a href="#">KANJI LEARNING</a>
+      <router-link class="Nav-Link" to="/">KANJI LEARNING</router-link>
     </div>
     <ul id="nav-menu">
-      <li> <a href="#">Kanji List</a></li>
-      <li> <a href="#">Quiz</a></li>
-      <li> <a href="#">About</a></li>
+      <li> <router-link class="Nav-Link" to="/kanji-list">Kanji List</router-link></li>
+      <li> <router-link class="Nav-Link" to="/quiz">Quiz</router-link></li>
+      <li> <router-link class="Nav-Link" to="/about">About</router-link></li>
     </ul>
   </header>
 </template>
@@ -25,7 +26,7 @@ header>* {
   flex-grow: 1;
 }
 
-header a {
+header .Nav-Link {
   color: var(--clr-text);
   text-decoration: none;
 }
@@ -63,18 +64,19 @@ header #nav-menu {
   gap: 2rem;
 }
 
-header #nav-menu a {
+header #nav-menu .Nav-Link {
   position: relative;
   display: inline-block;
   padding: 0px var(--nav-underline-padding);
   text-decoration: none;
 }
 
-header #nav-menu a:hover {
+header #nav-menu .Nav-Link:hover {
   text-shadow: 5px 5px 8px var(--nav-list-shadow);
+  cursor: pointer;
 }
 
-header #nav-menu a:after {
+header #nav-menu .Nav-Link:after {
   position: absolute;
   left: 0px;
   background-color: var(--nav-underline-clr);
@@ -86,7 +88,7 @@ header #nav-menu a:after {
   width: 0;
 }
 
-header #nav-menu a:hover:after {
+header #nav-menu .Nav-Link:hover:after {
   width: 100%;
 }
 

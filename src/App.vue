@@ -1,12 +1,11 @@
 <script setup>
+import { RouterView } from 'vue-router'
 import HeaderNav from './components/HeaderNav.vue'
-import HeroImage from './components/HomePage/HeroImage.vue'
-
 </script>
 
 <template>
   <HeaderNav></HeaderNav>
-  <HeroImage></HeroImage>
+  <RouterView />
 </template>
 
 <style scoped></style>
